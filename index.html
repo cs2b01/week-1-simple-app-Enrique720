@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+    <meta charset="UTF-8">
+    <title>Ingresar a tu cuenta</title>
+    <p aria-setsize="20" > Ingresar Sesión </p>
 </head>
-
 <body>
-Content of the document......
-</body>
 
+ <p> Ingrese Usuario: </p>
+    <input type ="text" id = "usuario" value />
+ <p> Ingrese contraseña: </p>
+    <input type ="password" id = "Contraseña"/>
+ <p>  </p>
+    <input type ="button" id = "boton" value="Log in" onclick="check(this.body)"/>
+    <script>
+        var Usuario_in = document.getElementById("usuario");
+        var Contrasena_in = document.getElementById("Contraseña");
+        function check(body){
+            if( Usuario_in.value== Contrasena_in.value ){
+                alert("Has ingresado a tu cuenta.");
+            }
+            else{
+                alert("EL usuario y contraseña son incorrectos. \n Por favor intentar nuevamente.");
+                Usuario_in.value= "";
+                Contrasena_in.value="";
+            }
+        }
+    </script>
+</body>
 </html>
